@@ -165,7 +165,7 @@
     "action": "拉黑",
     "threat_type": "供应链攻击",
     "发现日期": "2026/03/25",
-    "备注": "Litellm供应链攻击，数据外泄（tpcp.tar.gz）LiteLLM 数据泄露端点，来源https://mp.weixin.qq.com/s/Ck3iqEYBJYoIoZmdYRatag",
+    "备注": "Litellm供应链攻击，数据外泄（tpcp.tar.gz）LiteLLM 数据泄露端点，来源[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -465,7 +465,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/03/19",
-    "备注": "公共矿池，189atohci.sys(仿冒微软)",
+    "备注": "公共矿池，189atohci.sys",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -535,7 +535,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/18",
-    "备注": "https://zqsoftcdnhp.618xz.com/69b27396/e8ff2d7d6e7bad23d91fa5d8475bcc9e/uploadsoft/ChromeSetup-144.0.7559.97.exe?fp=9d63c9d7f8679b3e71e40d6c3f895925\nhttps://zqsoftcdnhp.618xz.com/69b26fa0/1de45c63fc206dbcd28aa57c41174907/uploadsoft/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8_1028_9cac0.exe?fp=53e3fe9f87c8077aa1467c9bc165b212",
+    "备注": "[URL]\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2325,7 +2325,7 @@
     "action": "拉黑",
     "threat_type": "木马远控",
     "发现日期": "2026/03/12",
-    "备注": "claude仿冒，混淆命令行解码地址，https://woupp.com/curl/a80da3cd26e73063104575ff1d3ee46e83cbd91c362e666af48a02a82730f127",
+    "备注": "claude仿冒，混淆命令行解码地址，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2365,7 +2365,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2375,7 +2375,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2385,7 +2385,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2395,7 +2395,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2405,7 +2405,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2415,7 +2415,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2425,7 +2425,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/12",
-    "备注": "https://mp.weixin.qq.com/s/0M1sZq1HqwAAaMbRDBEZEw",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2765,7 +2765,7 @@
     "action": "拉黑",
     "threat_type": "木马远控",
     "发现日期": "2026/03/11",
-    "备注": "GoogleChrome.exe，Danma (4).exe",
+    "备注": "GoogleChrome.exe，Danma .exe",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2775,7 +2775,7 @@
     "action": "拉黑",
     "threat_type": "木马远控",
     "发现日期": "2026/03/11",
-    "备注": "GoogleChrome.exe，RunCode.exe(5.2 MB)",
+    "备注": "GoogleChrome.exe，RunCode.exe",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2785,7 +2785,7 @@
     "action": "拉黑",
     "threat_type": "木马远控",
     "发现日期": "2026/03/11",
-    "备注": "GoogleChrome.exe，StartMenuExperienceHostker.exe(504 KB)",
+    "备注": "GoogleChrome.exe，StartMenuExperienceHostker.exe",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2795,7 +2795,7 @@
     "action": "拉黑",
     "threat_type": "木马远控",
     "发现日期": "2026/03/11",
-    "备注": "GoogleChrome.exe，VGHyOkUQKnOBFio.zip(5.23 MB)",
+    "备注": "GoogleChrome.exe，VGHyOkUQKnOBFio.zip",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2845,7 +2845,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/03/11",
-    "备注": "win32-Chronmestron.exe，is-FO2JN.tmp(2.85 MB)",
+    "备注": "win32-Chronmestron.exe，is-FO2JN.tmp",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -2855,7 +2855,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/03/11",
-    "备注": "win32-Chronmestron.exe，win32-Chronmestron.tmp(2.42 MB)",
+    "备注": "win32-Chronmestron.exe，win32-Chronmestron.tmp",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3445,7 +3445,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/09",
-    "备注": "银狐，https://hjendcs.huowdy.com/liulanSetup.zip",
+    "备注": "银狐，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3635,7 +3635,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/03/03",
-    "备注": "https://808880s.s3【.】ap-southeast-1【.】amazonaws【.】com/win-sougoushurusd-x64.zip",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3725,7 +3725,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "FUNNULL黑产，https://blog.xlab.qianxin.com/exposing-funnull-how-ringh23-maccms-are-poisoning-the-web/#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D",
+    "备注": "FUNNULL黑产，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3805,7 +3805,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://3snzh72om4.apifox.cn",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3815,7 +3815,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://node.blob.core.windows.net/update/a1\n\nhttps://node.blob.core.windows.net/update/a2\n\nhttps://node.blob.core.windows.net/update/s7\n\nhttps://node.blob.core.windows.net/update/s10\n\nhttps://node.blob.core.windows.net/update/s11\n\nhttps://node.blob.core.windows.net/update/s14\n\nhttps://node.blob.core.windows.net/update/h2.debianhacks.net/online\n\nhttps://node.blob.core.windows.net/update/j6.linuxdistro.net/online",
+    "备注": "[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3825,7 +3825,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://az-blob.110.nz/update/s1\n\nhttps://az-blob.110.nz/update/s2\n\nhttps://az-blob.110.nz/update/s3\n\nhttps://az-blob.110.nz/update/s4\n\nhttps://az-blob.110.nz/update/s7\n\nhttps://az-blob.110.nz/update/s9\n\nhttps://az-blob.110.nz/update/init",
+    "备注": "[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]\n\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3855,7 +3855,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://dowoxox.gfewr.com/B9.apk",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3865,7 +3865,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://plist.ztyfv.com/d/4F48MCiqtsjDCS7QOWs3KU.plist",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -3875,7 +3875,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://download.joymeet.top/app/2PG/00056321.mobileconfig",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4345,7 +4345,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://code.jquecy.com/jquery.min-3.6.8.js",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4355,7 +4355,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://cdnjs.jsdclivr.com/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css?v=3.7.8.2",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4365,7 +4365,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://cdn.jsdelivr.vip/jquery.min-3.7.0.js",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4375,7 +4375,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://static.bytedauce.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4385,7 +4385,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://api.bdustatic.com/jquery.min-4.0.12.js",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4395,7 +4395,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://cdnjs.clondflare.com/jquery.min-3.7.8.1.js",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4405,7 +4405,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://union.macoms.la/jquery.min-4.0.2.js",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4435,7 +4435,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "http://download.zhw.sh/wK4QYDIRFV/init\n\nhttp://download.zhw.sh/9aE5EFdJoS/init",
+    "备注": "[URL]\n\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4445,7 +4445,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://bucket.service.generate.110.nz/udev.sh\n\nhttps://bucket.service.generate.110.nz/2025-12-19/7d1d49a8d8c1fa7b4b743ed551fa338c112268e1/module.so\n\nhttps://bucket.service.generate.110.nz/2025-12-19/7d1d49a8d8c1fa7b4b743ed551fa338c112268e1/udev.rules\n\nhttps://bucket.service.generate.110.nz/2025-12-19/7d1d49a8d8c1fa7b4b743ed551fa338c112268e1/kernel.so",
+    "备注": "[URL]\n\n[URL]\n\n[URL]\n\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4455,7 +4455,7 @@
     "action": "需核查是否拉黑",
     "threat_type": "黑产团伙",
     "发现日期": "2026/02/27",
-    "备注": "https://oss2025-6f57.obs.ap-southeast-1.myhuaweicloud.com/%E5%B9%BF%E5%91%8A_1.ts",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4765,7 +4765,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/02/25",
-    "备注": "https://download.chrome-google.sbs/downloads/chrorne.php",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4805,7 +4805,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/13",
-    "备注": "https://mp.weixin.qq.com/s?__biz=MzU4ODQ3NTM2OA%3D%3D&mid=2247504299&idx=1&sn=db6de07e052089ee9893f2ffbd96eb7f&poc_token=HP2cimmj7dMtnRUEx33An38qUypkBQTSDv-tmo4m",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4815,7 +4815,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/13",
-    "备注": "https://mp.weixin.qq.com/s?__biz=MzU4ODQ3NTM2OA%3D%3D&mid=2247504299&idx=1&sn=db6de07e052089ee9893f2ffbd96eb7f&poc_token=HP2cimmj7dMtnRUEx33An38qUypkBQTSDv-tmo4m",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4825,7 +4825,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/13",
-    "备注": "https://mp.weixin.qq.com/s?__biz=MzU4ODQ3NTM2OA%3D%3D&mid=2247504299&idx=1&sn=db6de07e052089ee9893f2ffbd96eb7f&poc_token=HP2cimmj7dMtnRUEx33An38qUypkBQTSDv-tmo4m",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4835,7 +4835,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/13",
-    "备注": "https://mp.weixin.qq.com/s?__biz=MzU4ODQ3NTM2OA%3D%3D&mid=2247504299&idx=1&sn=db6de07e052089ee9893f2ffbd96eb7f&poc_token=HP2cimmj7dMtnRUEx33An38qUypkBQTSDv-tmo4m",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4865,7 +4865,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/02/12",
-    "备注": "https://snipsate.com.cn/ste-nip-64.zip",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4905,7 +4905,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/10",
-    "备注": "https://rentry.co/openclaw-core",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4915,7 +4915,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/10",
-    "备注": "https://install.app-distribution.net/setup/",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4925,7 +4925,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/10",
-    "备注": "https://glot.io/snippets/hfd3x9ueu5\nhttps://glot.io/snippets/hfdxv8uyaf",
+    "备注": "[URL]\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -4995,7 +4995,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/02/09",
-    "备注": "https://www.zwpht.com/xiangri/SunloginCli5.31.exe",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -5025,7 +5025,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/02/09",
-    "备注": "https://apps-oray.com/download",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -5245,7 +5245,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/05",
-    "备注": "IP、域名均拉黑，http://11.92.242.30/7buu24ly8m1tn8m4",
+    "备注": "IP、域名均拉黑，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -5255,7 +5255,7 @@
     "action": "拉黑",
     "threat_type": "恶意skill",
     "发现日期": "2026/02/05",
-    "备注": "IP、域名均拉黑，http://202.161.50.59/7buu24ly8m1tn8m4",
+    "备注": "IP、域名均拉黑，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -5305,7 +5305,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/02/03",
-    "备注": "https://dw.gptbrowser.net/fast/Gemini_Chorme_Ins.exe",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -5455,7 +5455,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/01/30",
-    "备注": "https://www.clash-github.com/Clasfo.zip",
+    "备注": "[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -5585,7 +5585,7 @@
     "action": "拉黑",
     "threat_type": "APT",
     "发现日期": "2026/01/27",
-    "备注": "Cloud Atlas，来源：APT情报共享",
+    "备注": "Cloud Atlas，",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -6415,7 +6415,7 @@
     "action": "拉黑",
     "threat_type": "代理工具",
     "发现日期": "2026/01/23",
-    "备注": "快雷GO，网络代理工具，https://kefu.kuailei.info",
+    "备注": "快雷GO，网络代理工具，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -6585,7 +6585,7 @@
     "action": "拉黑",
     "threat_type": "APT",
     "发现日期": "2026/01/21",
-    "备注": "APT利用利用VS Code、Cursor等IDE的json配置缺陷，投递恶意载体\n来源：https://mp.weixin.qq.com/s/rJZIZcja-Iba-TVZP_vwEg\n详细\nAPT组织Lazarus利用开发工具(VS Code、Cursor等IDE)的.vscode/tasks.json配置缺陷，投递恶意载体，达到受害者无感执行恶意命令目的",
+    "备注": "APT利用利用VS Code、Cursor等IDE的json配置缺陷，投递恶意载体\n\n详细\nAPT组织Lazarus利用开发工具的.vscode/tasks.json配置缺陷，投递恶意载体，达到受害者无感执行恶意命令目的",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -6825,7 +6825,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/01/15",
-    "备注": "银狐后门，Python库压缩包篡改与Chrome伪装攻击分析，999999.msi，来源：https://mp.weixin.qq.com/s/A3eOfz9ka-g3pRZb90pcqA",
+    "备注": "银狐后门，Python库压缩包篡改与Chrome伪装攻击分析，999999.msi，",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -7065,7 +7065,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/01/14",
-    "备注": "云枢告警-银狐，https://boolchrome.top/down/chrome/Gchrome.exe",
+    "备注": "云枢告警-银狐，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -7155,7 +7155,7 @@
     "action": "拉黑",
     "threat_type": "APT37",
     "发现日期": "2026/01/12",
-    "备注": "基于HWP的DLL侧加载攻击，来源：https://mp.weixin.qq.com/s/-7lHcf3AoRw-zcHrRAbxlQ",
+    "备注": "基于HWP的DLL侧加载攻击，",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -7295,7 +7295,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/01/12",
-    "备注": "利用迅雷进行Dll劫持，来源https://mp.weixin.qq.com/s/-7lHcf3AoRw-zcHrRAbxlQ",
+    "备注": "利用迅雷进行Dll劫持，来源[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -7615,7 +7615,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/01/10",
-    "备注": "仿冒向日葵，下载站点https://pub-22111837e3d94d28a52361ee32c5e5fa.r2.dev/rydfhrdh%20(1).zip",
+    "备注": "仿冒向日葵，下载站点[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -7625,7 +7625,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/01/10",
-    "备注": "仿冒向日葵，rydfhrdh (1).zip",
+    "备注": "仿冒向日葵，rydfhrdh .zip",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -7635,7 +7635,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2026/01/10",
-    "备注": "仿冒向日葵，rydfhrdh (1).exe",
+    "备注": "仿冒向日葵，rydfhrdh .exe",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8035,7 +8035,7 @@
     "action": "拉黑",
     "threat_type": "钓鱼仿冒",
     "发现日期": "2026/01/08",
-    "备注": "仿冒向日葵，https://officelilne.oss-cn-hongkong.aliyuncs.com/AweSun_yuancheng_x64.1.2.zip",
+    "备注": "仿冒向日葵，[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8165,7 +8165,7 @@
     "action": "拉黑",
     "threat_type": "木马远控",
     "发现日期": "2026/01/07",
-    "备注": "Office 助手投递恶意插件，OfficeTeamAddin64.dll\n收集用户信息和劫持用户流量，来源https://mp.weixin.qq.com/s/Vyg1bB72VNl0GPBhPyvfpw",
+    "备注": "Office 助手投递恶意插件，OfficeTeamAddin64.dll\n收集用户信息和劫持用户流量，来源[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8465,7 +8465,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)，photo202512176896m.pif\nhttps://mp.weixin.qq.com/s/czHZDZFO_jsZz6Yned0SEA",
+    "备注": "APT-Q-27，photo202512176896m.pif\n[URL]",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8475,7 +8475,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)，crashreport.dll",
+    "备注": "APT-Q-27，crashreport.dll",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8485,7 +8485,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)，letsvpn-latest.exe",
+    "备注": "APT-Q-27，letsvpn-latest.exe",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8495,7 +8495,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)，libcurl.dll",
+    "备注": "APT-Q-27，libcurl.dll",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8505,7 +8505,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)，Crash.ini",
+    "备注": "APT-Q-27，Crash.ini",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8515,7 +8515,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)，qr.dll",
+    "备注": "APT-Q-27，qr.dll",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -8525,7 +8525,7 @@
     "action": "拉黑",
     "threat_type": "银狐",
     "发现日期": "2025/12/31",
-    "备注": "APT-Q-27(金眼狗)",
+    "备注": "APT-Q-27",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -10125,7 +10125,7 @@
     "action": "拉黑",
     "threat_type": "PUA",
     "发现日期": "2025/12/01",
-    "备注": "仿冒微信、成都星汉云科科技有限公司\n夸克浏览器恶意推广，广州市动悦信息技术有限公司",
+    "备注": "夸克浏览器恶意推广，",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
@@ -10295,7 +10295,7 @@
     "action": "",
     "threat_type": "",
     "发现日期": "2025/11/30",
-    "备注": "来源：IOC威胁情报协作https://my.feishu.cn/wiki/OqJhwSESRieLABk2jkvca9U4nQ5?sheet=HsYrZJ",
+    "备注": "",
     "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
     "added_date": "2026-03-25"
   },
