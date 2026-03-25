@@ -1,0 +1,6 @@
+# IOC Database - 数据文件
+data/
+raw/                  # 原始上传的 CSV/JSON 文件
+processed/            # 处理后的 IOC 数据
+  iocs.json          # 合并后的 IOC 数据库
+index.json           # 主索引 (含 SHA256)
