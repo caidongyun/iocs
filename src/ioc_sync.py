@@ -112,7 +112,6 @@ class IOCSync:
                             all_iocs.append({
                                 'ioc': ioc_value,
                                 'type': ioc_type,
-                                'platform': row.get('平台加黑', '').strip(),
                                 'action': row.get('处置动作', '').strip(),
                                 'threat_type': row.get('威胁类型', '').strip(),
                                 '发现日期': row.get('发现日期', '').strip(),
