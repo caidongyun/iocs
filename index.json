@@ -1,20 +1,14 @@
 {
   "version": "2026-03-25",
-  "last_updated": "2026-03-25T15:50:24.763263Z",
-  "total_count": 1719,
-  "sha256": "513b38a1108d3628f81d0a958edcabbc8ff8b90113a5f36a580801801716b827",
+  "last_updated": "2026-03-25T18:59:42.845797Z",
+  "total_count": 1855,
+  "sha256": "f38466f90abd22f4672e75cc104075c720afe177e8ef517b7972f66c7486e304",
   "files": [
     {
-      "filename": "IOC情报协作_IOC_IOC-3.25.csv",
-      "sha256": "37195004f36c06b832dcfe409d6771a43505f44ce6a73811df949953cf72d89c",
+      "filename": "IOC情报协作_IOC_IOC-3.25-2.csv",
+      "sha256": "ff017eebbfa0dd26c2452203fd6c8050991372a472e4363b35af136c1b6bb9ba",
       "added_date": "2026-03-25",
-      "record_count": 1714
-    },
-    {
-      "filename": "apifox-ioc-20260325.json",
-      "sha256": "c2aef30031142e1d153cf0f8a1ab07ed6e03b6dc820a447f27631fc42a08d2ac",
-      "added_date": "2026-03-25",
-      "record_count": 5
+      "record_count": 1855
     }
   ]
 }
