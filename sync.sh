@@ -4,6 +4,11 @@
 
 cd "$(dirname "$0")"
 
+# 加载 Token (如果存在)
+if [ -f .env ]; then
+    export $(cat .env | grep -v '^#' | xargs)
+fi
+
 if [ "$1" == "--init" ]; then
     python src/ioc_sync.py --path . --init
 elif [ "$1" == "--status" ]; then
