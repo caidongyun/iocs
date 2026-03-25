@@ -7,6 +7,9 @@ data/raw/*
 # CSV 源文件 - 不上传
 *.csv
 
+# 本地规范 - 不上传
+SPEC.md
+
 # Token 配置
 .env
 
