@@ -17138,5 +17138,50 @@
     "备注": "备注",
     "source_file": "IOC情报协作_IOC_IOC-3.25.csv",
     "added_date": "2026-03-25"
+  },
+  {
+    "ioc": "apifox.it.com",
+    "type": "域名",
+    "threat_type": "Apifox投毒",
+    "发现日期": "2026-03-25",
+    "备注": "恶意非官方域名",
+    "source_file": "apifox-ioc-20260325.json",
+    "added_date": "2026-03-25"
+  },
+  {
+    "ioc": "cdn.openroute.dev",
+    "type": "域名",
+    "threat_type": "Apifox投毒",
+    "发现日期": "2026-03-25",
+    "备注": "恶意域名",
+    "source_file": "apifox-ioc-20260325.json",
+    "added_date": "2026-03-25"
+  },
+  {
+    "ioc": "upgrade.feishu.it.com",
+    "type": "域名",
+    "threat_type": "Apifox投毒",
+    "发现日期": "2026-03-25",
+    "备注": "恶意域名",
+    "source_file": "apifox-ioc-20260325.json",
+    "added_date": "2026-03-25"
+  },
+  {
+    "ioc": "system.toshinkyo.or.jp",
+    "type": "域名",
+    "threat_type": "Apifox投毒",
+    "发现日期": "2026-03-25",
+    "备注": "恶意域名",
+    "source_file": "apifox-ioc-20260325.json",
+    "added_date": "2026-03-25"
+  },
+  {
+    "ioc": "ns.feishu.it.com",
+    "type": "域名",
+    "threat_type": "Apifox投毒",
+    "发现日期": "2026-03-25",
+    "备注": "恶意域名",
+    "source_file": "apifox-ioc-20260325.json",
+    "added_date": "2026-03-25"
   }
 ]

@@ -1,14 +1,20 @@
 {
   "version": "2026-03-25",
-  "last_updated": "2026-03-25T14:35:12.715165Z",
-  "total_count": 1714,
-  "sha256": "4874b80682e71eba7aef9647c26e90d39eaff5711bdaaef2cf5740391e7567d4",
+  "last_updated": "2026-03-25T15:50:24.763263Z",
+  "total_count": 1719,
+  "sha256": "513b38a1108d3628f81d0a958edcabbc8ff8b90113a5f36a580801801716b827",
   "files": [
     {
       "filename": "IOC情报协作_IOC_IOC-3.25.csv",
       "sha256": "37195004f36c06b832dcfe409d6771a43505f44ce6a73811df949953cf72d89c",
       "added_date": "2026-03-25",
       "record_count": 1714
+    },
+    {
+      "filename": "apifox-ioc-20260325.json",
+      "sha256": "c2aef30031142e1d153cf0f8a1ab07ed6e03b6dc820a447f27631fc42a08d2ac",
+      "added_date": "2026-03-25",
+      "record_count": 5
     }
   ]
 }
