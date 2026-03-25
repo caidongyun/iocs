@@ -4,6 +4,9 @@
 data/raw/*
 !data/raw/.gitkeep
 
+# Token 配置
+.env
+
 # 临时文件
 *.tmp
 *.log

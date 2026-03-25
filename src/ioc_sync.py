@@ -142,6 +142,14 @@ class IOCSync:
         
         return new_count
     
+    def get_token(self, remote: str) -> str:
+        """获取 Token"""
+        if remote == 'origin' or remote == 'github':
+            return os.environ.get('GITHUB_TOKEN', '')
+        elif remote == 'gitee':
+            return os.environ.get('GITEE_TOKEN', '')
+        return ''
+    
     def git_commit_push(self, message: str) -> bool:
         """Git 提交并推送"""
         # Add all changes
@@ -162,13 +170,43 @@ class IOCSync:
             print(f"[ERROR] git commit failed: {err}")
             return False
         
-        # Push
-        code, out, err = self.run_command(['git', 'push', 'origin', 'main'])
-        if code != 0:
-            print(f"[ERROR] git push failed: {err}")
-            return False
+        # Push to all remotes
+        remotes = ['origin', 'gitee']
+        all_success = True
         
-        return True
+        for remote in remotes:
+            token = self.get_token(remote)
+            if not token:
+                print(f"[WARN] No token for {remote}, skipping")
+                continue
+            
+            # Get remote URL
+            code, url, _ = self.run_command(['git', 'remote', 'get-url', remote])
+            if code != 0:
+                continue
+            
+            url = url.strip()
+            # Add token to URL
+            if '@' in url:
+                # Already has credentials
+                push_url = url
+            else:
+                # Add token
+                if 'github' in url:
+                    push_url = f"https://{token}@github.com/caidongyun/iocs.git"
+                elif 'gitee' in url:
+                    push_url = f"https://{token}@gitee.com/caidongyun/iocs.git"
+                else:
+                    push_url = url
+            
+            code, out, err = self.run_command(['git', 'push', remote, 'master', '--force'])
+            if code != 0:
+                print(f"[ERROR] git push to {remote} failed: {err}")
+                all_success = False
+            else:
+                print(f"[OK] Pushed to {remote}")
+        
+        return all_success
     
     def sync(self, commit_message: str = None) -> dict:
         """执行同步"""
