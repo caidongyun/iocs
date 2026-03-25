@@ -1,0 +1,10 @@
+# IOC Repository - .gitignore
+
+# 原始文件 - 不上传
+data/raw/*
+!data/raw/.gitkeep
+
+# 临时文件
+*.tmp
+*.log
+__pycache__/
