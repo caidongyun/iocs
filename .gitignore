@@ -4,6 +4,9 @@
 data/raw/*
 !data/raw/.gitkeep
 
+# CSV 源文件 - 不上传
+*.csv
+
 # Token 配置
 .env
 
