@@ -17,12 +17,41 @@ from typing import List, Set
 
 
 class IOCChecker:
-    def __init__(self, ioc_file: str = None):
+    # 域名白名单 - 权威可信站点，永不视为 IOC
+    DOMAIN_WHITELIST = {
+        'qq.com',
+    }
+    
+    def __init__(self, ioc_file: str = None, whitelist_file: str = None):
         self.ioc_file = ioc_file or 'data/processed/iocs.json'
+        self.whitelist_file = whitelist_file
         self.domains: Set[str] = set()
         self.ips: Set[str] = set()
         self.hashes: Set[str] = set()
+        self.whitelist: Set[str] = set()
+        self._load_whitelist()
         self.load_iocs()
+    
+    def _load_whitelist(self):
+        """加载白名单文件（可选，每行一个域名或后缀）"""
+        # 内置白名单
+        self.whitelist = set(self.DOMAIN_WHITELIST)
+        
+        # 尝试加载用户白名单文件
+        if self.whitelist_file:
+            wl_path = Path(self.whitelist_file)
+        else:
+            script_dir = Path(__file__).parent.parent
+            wl_path = script_dir / 'whitelist.txt'
+        
+        if wl_path.exists():
+            with open(wl_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    domain = line.strip()
+                    if domain and not domain.startswith('#'):
+                        self.whitelist.add(domain.lower())
+        
+        print(f"[OK] Whitelist: {len(self.whitelist)} entries")
     
     def load_iocs(self):
         """加载 IOC 数据"""
@@ -48,9 +77,24 @@ class IOCChecker:
                 elif ioc_type == 'Hash' or len(ioc_value) == 64:
                     self.hashes.add(ioc_value.lower())
                 elif ioc_type == '域名' or '.' in ioc_value and not self._is_ip(ioc_value):
-                    self.domains.add(ioc_value.lower())
+                    # 白名单内的不加入黑名单
+                    if not self._is_whitelisted(ioc_value):
+                        self.domains.add(ioc_value.lower())
+                    else:
+                        print(f"  [WHITELISTED] {ioc_value}")
         
         print(f"[OK] Loaded {len(self.domains)} domains, {len(self.ips)} IPs, {len(self.hashes)} hashes")
+    
+    def _is_whitelisted(self, domain: str) -> bool:
+        """检查域名是否在白名单"""
+        domain = domain.lower()
+        if domain in self.whitelist:
+            return True
+        # 后缀匹配
+        for wl in self.whitelist:
+            if domain.endswith('.' + wl) or domain == wl:
+                return True
+        return False
     
     def _is_ip(self, value: str) -> bool:
         """判断是否为 IP 地址"""
@@ -60,8 +104,11 @@ class IOCChecker:
         return all(p.isdigit() and 0 <= int(p) <= 255 for p in parts)
     
     def check_domain(self, domain: str) -> bool:
-        """检查域名是否在黑名单"""
+        """检查域名是否在黑名单（白名单内的直接跳过）"""
         domain = domain.lower()
+        # 白名单优先
+        if self._is_whitelisted(domain):
+            return False
         if domain in self.domains:
             return True
         # 检查域名后缀
