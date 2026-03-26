@@ -36,15 +36,89 @@
 
 ---
 
-## 二、架构
+## 二、规范
 
-### 2.1 技术栈
+### 2.1 上传规则
+
+| 文件 | 说明 | 上传 |
+|------|------|------|
+| `index.json` | 主索引（SHA256） | ✅ |
+| `data/processed/iocs.json` | IOC 数据库 | ✅ |
+| `src/*.py` | 工具脚本 | ✅ |
+| `whitelist.txt` | 白名单 | ❌ 本地 |
+| `*.csv` | CSV 原始文件 | ❌ 不上传 |
+| `SPEC.md` | 本地规范 | ❌ 不上传 |
+| `.env` | Token 配置 | ❌ 不上传 |
+
+### 2.2 数据规范
+
+**IOC JSON 条目格式：**
+```json
+{
+  "ioc": "evil.com",
+  "type": "域名",
+  "action": "拉黑",
+  "threat_type": "钓鱼仿冒",
+  "发现日期": "2026/03/25",
+  "备注": "钓鱼仿冒知名企业",
+  "source_file": "IOC情报协作_IOC_IOC-3.25-2.csv",
+  "added_date": "2026-03-25"
+}
+```
+
+**字段规则：**
+
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| ioc | ✅ | IOC 值（域名/IP/Hash） |
+| type | ✅ | 类型：域名 / IP / Hash |
+| action | ❌ | 处置动作，如"拉黑" |
+| threat_type | ❌ | 威胁类型，如"钓鱼仿冒" |
+| 发现日期 | ❌ | 原始发现日期 |
+| 备注 | ❌ | 备注信息，将被清洗 |
+| source_file | ✅ | 来源 CSV 文件名 |
+| added_date | ✅ | 入库日期（自动） |
+| platform | ❌ | 平台加黑，**不采集** |
+
+### 2.3 备注清洗规范
+
+以下关键词在入库时将被自动移除：
+- `lidar告警`
+- `tdp告警`
+- `来源：`
+- `云枢告警`
+- `安全卫士`
+
+### 2.4 白名单规范
+
+- **来源**：用户编辑 `whitelist.txt`，不上传 Git
+- **格式**：每行一个域名或后缀
+- **匹配**：
+  - 精确匹配：`qq.com` → 匹配 `qq.com`
+  - 后缀匹配：`.qq.com` → 匹配 `api.qq.com`、`mp.weixin.qq.com`
+- **作用时机**：加载时过滤 + 检测时二次验证
+
+### 2.5 Git 提交规范
+
+| 前缀 | 说明 | 示例 |
+|------|------|------|
+| `feat:` | 新功能、工具 | `feat: add whitelist support` |
+| `clean:` | 数据清理 | `clean: remove lidar alerts from remarks` |
+| `regen:` | 重新生成 IOC 库 | `regen: from new CSV` |
+| `fix:` | 修复问题 | `fix: dedup logic error` |
+| `docs:` | 文档更新 | `docs: rewrite README` |
+
+---
+
+## 三、架构
+
+### 3.1 技术栈
 - **语言**：Python 3
 - **版本管理**：Git（GitHub + Gitee 双平台）
 - **数据格式**：JSON
 - **校验方式**：SHA256
 
-### 2.2 目录结构
+### 3.2 目录结构
 
 ```
 D:\IOC-src\
@@ -64,7 +138,7 @@ D:\IOC-src\
 └── README.md
 ```
 
-### 2.3 数据流
+### 3.3 数据流
 
 ```
 CSV 文件（原始）
@@ -78,131 +152,131 @@ ioc_indexer.py →  更新 index.json（SHA256）
 git add → commit → push → GitHub / Gitee
 ```
 
-### 2.4 IOC 检测流程（checker）
+---
+
+## 四、流程记录
+
+### 4.1 日常操作流程
+
+```
+┌─────────────────────────────────────────┐
+│  收到新 CSV 情报文件                      │
+└─────────────┬───────────────────────────┘
+              ↓
+┌─────────────────────────────────────────┐
+│  ① 放入 D:\IOC-src\ 目录                 │
+└─────────────┬───────────────────────────┘
+              ↓
+┌─────────────────────────────────────────┐
+│  ② 解析 CSV                             │
+│  python src/ioc_parser.py --input xxx.csv │
+└─────────────┬───────────────────────────┘
+              ↓
+┌─────────────────────────────────────────┐
+│  ③ 清洗备注                             │
+│  python src/ioc_clean.py                 │
+│  data/processed/iocs.json                │
+└─────────────┬───────────────────────────┘
+              ↓
+┌─────────────────────────────────────────┐
+│  ④ 更新索引                             │
+│  python src/ioc_indexer.py               │
+└─────────────┬───────────────────────────┘
+              ↓
+┌─────────────────────────────────────────┐
+│  ⑤ Git 提交并推送                        │
+│  git add → commit → push                 │
+└─────────────────────────────────────────┘
+```
+
+### 4.2 IOC 检测流程
 
 ```
 输入：域名 / IP / Hash / 文件路径
     ↓
 加载 iocs.json（白名单域名在加载时过滤）
     ↓
-匹配检测 → 输出 MATCH / OK
+匹配检测 → 输出 MATCH（命中）/ OK（通过）
 ```
 
-### 2.5 白名单机制
+### 4.3 版本记录
 
-- **内置**：`src/ioc_checker.py` 硬编码（当前仅 `qq.com`）
-- **用户自定义**：`whitelist.txt`（每行一个域名后缀，不上传 Git）
-- **作用时机**：加载时过滤 + 检测时二次验证
+| 日期 | 版本 | 变更说明 |
+|------|------|---------|
+| 2026-03-26 | v2.0 | 新增白名单机制、重写 README |
+| 2026-03-25 | v1.0 | 初始版本，含 CSV 解析、检测、清洗、同步 |
+
+### 4.4 项目 Commit 历史
+
+| Commit | 说明 | 日期 |
+|--------|------|------|
+| `a57d2d3` | docs: add requirements, architecture, release guidelines | 2026-03-26 |
+| `0f8a361` | docs: rewrite README with project record | 2026-03-26 |
+| `37c8c4e` | feat: add whitelist support | 2026-03-26 |
+| `27e3d53` | regen: Regenerate and clean IOCs | 2026-03-25 |
+| `7ee8fb7` | clean: Clean lidar/tdp alerts from remarks | 2026-03-25 |
+| `785abbc` | regen: from IOC情报协作_IOC_IOC-3.25-2.csv | 2026-03-25 |
+| `bc6c537` | clean: Clean private info from remarks | 2026-03-25 |
+| `ed4bdff` | chore: Ignore CSV source files | 2026-03-25 |
+| `71b3a74` | regen: from new CSV | 2026-03-25 |
+| `6c4de72` | feat: Add Apifox poisoning IOCs | 2026-03-25 |
+| `c3b708c` | clean: Remove platform field (internal info) | 2026-03-25 |
+| `dd07460` | feat: Add IOC sync tool | 2026-03-25 |
+| `5ff4639` | init: Initial IOC data | 2026-03-25 |
 
 ---
 
-## 三、发布要求
+## 五、使用指南
 
-### 3.1 上传规则
+### 5.1 IOC 检测（核心功能）
 
-| 文件 | 说明 | 上传 |
-|------|------|------|
-| `index.json` | 主索引（SHA256） | ✅ |
-| `data/processed/iocs.json` | IOC 数据库 | ✅ |
-| `src/*.py` | 工具脚本 | ✅ |
-| `whitelist.txt` | 白名单 | ❌ 本地 |
-| `*.csv` | CSV 原始文件 | ❌ 不上传 |
-| `SPEC.md` | 本地规范 | ❌ 不上传 |
-| `.env` | Token 配置 | ❌ 不上传 |
-
-### 3.2 完整性校验
-
-每次发布前必须更新 `index.json` 中的 SHA256：
-
-```bash
-python src/ioc_indexer.py
-```
-
-验证方法：
-```bash
-python -c "
-import hashlib, json
-with open('data/processed/iocs.json','rb') as f:
-    sha = hashlib.sha256(f.read()).hexdigest()
-with open('index.json','r') as f:
-    idx = json.load(f)
-print('SHA256 Match:', sha == idx['sha256'])
-"
-```
-
-### 3.3 Git 提交规范
-
-| 前缀 | 说明 | 示例 |
-|------|------|------|
-| `feat:` | 新功能、工具 | `feat: add whitelist support` |
-| `clean:` | 数据清理 | `clean: remove lidar alerts from remarks` |
-| `regen:` | 重新生成 IOC 库 | `regen: from new CSV` |
-| `fix:` | 修复问题 | `fix: dedup logic error` |
-| `docs:` | 文档更新 | `docs: rewrite README` |
-
-### 3.4 版本节奏
-
-- **日常**：检测器实时可用，无需频繁更新
-- **数据更新**：有新 CSV 时重新解析、去重、清洗、push
-- **工具迭代**：功能改动后单独 commit，附言说明
-
----
-
-## 四、使用指南
-
-### 4.1 检测域名
+**检测域名：**
 ```bash
 python src/ioc_checker.py --domain evil.com
 ```
 
-### 4.2 检测 IP
+**检测 IP：**
 ```bash
 python src/ioc_checker.py --ip 1.2.3.4
 ```
 
-### 4.3 检测文件（SHA256 匹配）
+**检测文件（SHA256 匹配）：**
 ```bash
 python src/ioc_checker.py --file suspicious.exe
 ```
 
-### 4.4 解析新 CSV
+**JSON 输出：**
+```bash
+python src/ioc_checker.py --domain evil.com --json
+```
+
+### 5.2 数据处理
+
+**解析新 CSV：**
 ```bash
 python src/ioc_parser.py --input data/raw/xxx.csv
 ```
 
-### 4.5 清理备注
+**清洗备注：**
 ```bash
 python src/ioc_clean.py data/processed/iocs.json
 ```
 
-### 4.6 一键同步
+**更新索引：**
+```bash
+python src/ioc_indexer.py
+```
+
+### 5.3 一键同步
 ```bash
 bash sync.sh
 ```
 
 ---
 
-## 五、项目历史
-
-| Commit | 说明 | 日期 |
-|--------|------|------|
-| `0f8a361` | docs: rewrite README | 2026-03-26 |
-| `37c8c4e` | feat: add whitelist support | 2026-03-26 |
-| `27e3d53` | Regenerate and clean IOCs | 2026-03-25 |
-| `7ee8fb7` | Clean lidar/tdp alerts from remarks | 2026-03-25 |
-| `785abbc` | Regenerate from IOC情报协作_IOC_IOC-3.25-2.csv | 2026-03-25 |
-| `bc6c537` | Clean private info from remarks | 2026-03-25 |
-| `ed4bdff` | Ignore CSV source files | 2026-03-25 |
-| `71b3a74` | Regenerate IOC database from new CSV | 2026-03-25 |
-| `6c4de72` | Add Apifox poisoning IOCs | 2026-03-25 |
-| `dd07460` | Add IOC sync tool | 2026-03-25 |
-| `5ff4639` | Initial commit: IOC data 2026-03-25 | 2026-03-25 |
-
----
-
 ## 六、数据格式
 
-### IOC JSON 条目
+### 6.1 IOC JSON
 ```json
 {
   "ioc": "evil.com",
@@ -216,7 +290,7 @@ bash sync.sh
 }
 ```
 
-### index.json 索引
+### 6.2 index.json
 ```json
 {
   "version": "2026-03-25",
