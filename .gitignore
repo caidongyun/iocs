@@ -17,3 +17,6 @@ SPEC.md
 *.tmp
 *.log
 __pycache__/
+
+# 白名单 - 本地维护，不上传
+whitelist.txt

@@ -1,4 +1,0 @@
-# IOC 白名单 - 每行一个域名后缀
-# 以 . 开头表示后缀匹配，如 .qq.com 匹配 api.qq.com、mp.weixin.qq.com 等
-# 不以 . 开头表示精确匹配
-# 此文件不上传 Git

@@ -1,0 +1,38 @@
+{
+  "version": "v1.2.0-20260429",
+  "date": "2026-04-29",
+  "message": "新增 3.26-4.29 IOC 461 条",
+  "previous_version": "2026-03-25",
+  "summary": {
+    "total_before": 1855,
+    "total_after": 2316,
+    "added": 461,
+    "removed": 0
+  },
+  "by_type": {
+    "Hash": 744,
+    "域名": 1224,
+    "IP": 312,
+    "": 16,
+    "其他": 3,
+    "邮箱": 2,
+    "URL": 5,
+    "签名": 2,
+    "类型": 1,
+    "路径": 7
+  },
+  "diff": {
+    "added": 461,
+    "removed": 0,
+    "added_by_type": {
+      "域名": 326,
+      "Hash": 90,
+      "IP": 34,
+      "URL": 1,
+      "路径": 7,
+      "(empty)": 3
+    },
+    "removed_by_type": {}
+  },
+  "sha256": "c7bc505cdc6f92b0ebcb066efa6584f42eafc967d606c9643775af89e47d8887"
+}
